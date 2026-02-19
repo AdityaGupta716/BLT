@@ -91,7 +91,7 @@
                     <div class="flex flex-col space-y-1">
                         <label for="email"
                                class="text-sm font-semibold text-gray-500 dark:text-gray-500">Username</label>
-                        <input autofocus
+                        <input 
                                type="text"
                                id="id_username"
                                name="username"
@@ -248,5 +248,10 @@
                 refreshCaptcha();
             }
         });
+    </script>
+    <script>
+        if (window.innerWidth >= 768) {
+            document.getElementById('id_username').focus();
+        }
     </script>
 {% endblock natural_content %}
